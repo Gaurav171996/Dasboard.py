@@ -11,7 +11,7 @@ fli= st.file_uploader(" :file_folder upload a file", type=(["CSV","txt","xlsx","
 if fli is not None:
     filename = fli.name
     st.write(filename)
-    df=pd.read_csv(fli,encoding= "ISO-8859-1")    
+    df=pd.read_csv(fli,encoding= "ISO-8859-1",sep =',',on_bad_lines='skip')    
         
     col1, col2 = st.columns((2))
 
